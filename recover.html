@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1424">
+    <title>Recuperar cuenta | PC Gamer Shop</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #0b1424;
+            --card: #111d31;
+            --border: #263b58;
+            --text: #e8f1ff;
+            --muted: #9db0ca;
+            --blue: #49b8ff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 28px 16px;
+            display: grid;
+            place-items: center;
+            background: radial-gradient(ellipse at top, #142947, var(--bg) 62%);
+            color: var(--text);
+            font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+        }
+        main {
+            width: min(100%, 440px);
+            padding: 32px;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--card);
+            box-shadow: 0 24px 70px #0006;
+        }
+        .logo { display: block; width: min(100%, 310px); margin: 0 auto 20px; }
+        .logo img { display: block; width: 100%; height: auto; }
+        h1 { margin: 0 0 8px; text-align: center; font-size: 1.65rem; }
+        .intro { margin: 0 0 24px; color: var(--muted); text-align: center; }
+        label { display: block; margin: 16px 0 6px; font-weight: 650; }
+        input {
+            width: 100%;
+            min-height: 48px;
+            padding: 11px 13px;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            background: #0b1424;
+            color: var(--text);
+            font: inherit;
+        }
+        input:focus { outline: 2px solid var(--blue); outline-offset: 1px; }
+        button {
+            width: 100%;
+            min-height: 48px;
+            margin-top: 20px;
+            border: 0;
+            border-radius: 9px;
+            background: #1678d2;
+            color: white;
+            font: inherit;
+            font-weight: 750;
+            cursor: pointer;
+        }
+        button:hover { background: #1268b8; }
+        button:disabled { cursor: wait; opacity: .7; }
+        .status { min-height: 1.6em; margin: 14px 0; color: var(--muted); }
+        .status.error { color: #ff9a9a; }
+        .status.success { color: #8de0ad; }
+        .back { margin: 20px 0 0; text-align: center; }
+        a { color: var(--blue); font-weight: 650; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        [hidden] { display: none !important; }
+        @media (max-width: 480px) { main { padding: 25px 20px; } }
+    </style>
+</head>
+<body>
+    <main>
+        <a class="logo" href="index.html" aria-label="PC Gamer Shop, inicio">
+            <img src="assets/pc-gamer-shop-navbar-logo.png" alt="PC Gamer Shop">
+        </a>
+        <h1>Recuperar cuenta</h1>
+        <p class="intro">Ingresá el correo asociado a tu cuenta para recuperar tu contraseña.</p>
+
+        <form id="request-form">
+            <label for="request-email">Correo electrónico</label>
+            <input id="request-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+            <button type="submit">Enviar código</button>
+        </form>
+
+        <form id="reset-form" hidden>
+            <label for="reset-email">Correo electrónico</label>
+            <input id="reset-email" name="email" type="email" autocomplete="email" maxlength="254" required readonly>
+            <label for="reset-code">Código de recuperación</label>
+            <input id="reset-code" name="code" inputmode="numeric" pattern="[0-9]{6}" autocomplete="one-time-code" maxlength="6" required>
+            <label for="new-password">Nueva contraseña</label>
+            <input id="new-password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required>
+            <button type="submit">Cambiar contraseña</button>
+        </form>
+        <p id="form-status" class="status" role="status" aria-live="polite"></p>
+        <p class="back"><a href="login.html">Volver a iniciar sesión</a></p>
+    </main>
+    <script>
+        const requestForm = document.querySelector("#request-form");
+        const resetForm = document.querySelector("#reset-form");
+        const status = document.querySelector("#form-status");
+
+        function showStatus(message, kind) {
+            status.textContent = message;
+            status.className = `status${kind ? ` ${kind}` : ""}`;
+        }
+
+        async function submitJson(form, endpoint) {
+            const button = form.querySelector("button");
+            button.disabled = true;
+            showStatus("Procesando...", "");
+            try {
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                });
+                const result = await response.json();
+                if (!response.ok) throw new Error(result.error || "No se pudo completar la solicitud.");
+                return result;
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        requestForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            try {
+                const result = await submitJson(requestForm, "/api/forgot-password");
+                document.querySelector("#reset-email").value = document.querySelector("#request-email").value.trim();
+                if (result.developmentCode) {
+                    document.querySelector("#reset-code").value = result.developmentCode;
+                    showStatus(`Modo local: no se envió un correo. Tu código de recuperación es ${result.developmentCode}.`, "success");
+                } else {
+                    showStatus(result.message, "success");
+                }
+                requestForm.hidden = true;
+                resetForm.hidden = false;
+                document.querySelector("#reset-code").focus();
+            } catch (error) {
+                showStatus(error.message, "error");
+            }
+        });
+
+        resetForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            try {
+                const result = await submitJson(resetForm, "/api/reset-password");
+                resetForm.hidden = true;
+                showStatus(result.message, "success");
+                window.setTimeout(() => { window.location.href = "login.html"; }, 1800);
+            } catch (error) {
+                showStatus(error.message, "error");
+            }
+        });
+    </script>
+</body>
+</html>

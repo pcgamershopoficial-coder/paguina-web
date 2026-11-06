@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | PC Gamer Shop</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-dark: #0b0f19;
+            --bg-card: #111d31;
+            --accent-green: #1688ff;
+            --accent-blue: #49b8ff;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #263b58;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            display: grid;
+            min-height: 100vh;
+            margin: 0;
+            padding: 24px;
+            place-items: center;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        .login-box {
+            width: 100%;
+            max-width: 430px;
+            padding: 38px;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--bg-card);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        }
+        .logo {
+            display: block;
+            width: min(100%, 340px);
+            margin: 0 auto 12px;
+        }
+        .logo img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        h1 { margin: 0 0 25px; font-size: 23px; text-align: center; }
+        input {
+            width: 100%;
+            margin: 10px 0;
+            padding: 13px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font: inherit;
+            font-size: 14px;
+        }
+        input::placeholder { color: var(--text-muted); }
+        input:focus { border-color: var(--accent-green); outline: none; box-shadow: 0 0 0 3px rgba(22, 136, 255, 0.18); }
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 13px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--accent-green);
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        button:hover { background: #1268c4; }
+        button:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 3px; }
+        p { margin-top: 20px; color: var(--text-muted); font-size: 14px; text-align: center; }
+        a:not(.logo) { color: var(--accent-blue); font-weight: 600; text-decoration: none; }
+        a:not(.logo):hover { text-decoration: underline; }
+        .form-status { line-height: 1.5; }
+        .form-status:empty { display: none; }
+        .form-status.error { color: #ff9a9a; }
+        @media (max-width: 480px) { .login-box { padding: 30px 24px; } }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <a href="index.html" class="logo" aria-label="PC Gamer Shop, inicio"><img src="assets/pc-gamer-shop-navbar-logo.png" alt="PC Gamer Shop"></a>
+        <h1>Iniciar sesión</h1>
+        <form id="login-form" action="/api/login" method="post" autocomplete="on">
+            <input type="email" name="email" placeholder="Correo electrónico" autocomplete="email" maxlength="254" required>
+            <input type="password" name="password" placeholder="Contraseña" autocomplete="current-password" minlength="8" maxlength="128" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        <p><a href="recover.html">¿Olvidaste tu contraseña? Recuperar cuenta</a></p>
+        <p>¿No tenés cuenta? <a href="register.html">Registrate acá</a></p>
+        <p>¿Necesitás ayuda? <a href="contact.html">Contactanos</a></p>
+    </div>
+    <script>
+        const form = document.getElementById("login-form");
+        const status = document.getElementById("form-status");
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+            const button = form.querySelector("button");
+            button.disabled = true;
+            status.classList.remove("error");
+            status.textContent = "Iniciando sesión...";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                });
+                const responseBody = await response.text();
+                let result;
+                try {
+                    result = JSON.parse(responseBody);
+                } catch {
+                    status.classList.add("error");
+                    const serverMessage = responseBody.trim();
+                    status.textContent = response.status === 403
+                        ? `El servidor rechazó el acceso (403)${serverMessage ? `: ${serverMessage}` : "."} Verificá que la tienda esté iniciada con npm.cmd start y abrí el registro desde http://localhost:3000/login.html.`
+                        : `El servidor respondió con un formato inesperado (${response.status})${serverMessage ? `: ${serverMessage}` : "."}`;
+                    return;
+                }
+
+                if (!response.ok) {
+                    status.classList.add("error");
+                    status.textContent = result.error || "No se pudo iniciar sesión.";
+                    return;
+                }
+
+                form.reset();
+                window.location.assign("/");
+            } catch {
+                status.classList.add("error");
+                status.textContent = window.location.protocol === "file:"
+                    ? "Abriste el inicio de sesión como archivo. Iniciá la tienda con npm start y abrí http://127.0.0.1:3000/login.html."
+                    : "No se pudo conectar con el servidor. Verificá que Node.js esté instalado y que la tienda siga ejecutándose con npm start.";
+            } finally {
+                button.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

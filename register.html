@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta | PC Gamer Shop</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-dark: #0b1424;
+            --bg-card: #111d31;
+            --accent-green: #1688ff;
+            --accent-blue: #49b8ff;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --border-color: #263b58;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: var(--bg-dark);
+            color: var(--text);
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .topbar {
+            height: 8px;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 76px;
+            padding: 0 max(24px, calc((100% - 1100px) / 2));
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            display: block;
+            width: min(250px, 55vw);
+            text-decoration: none;
+        }
+        .logo img { display: block; width: 100%; height: auto; }
+
+        .header-note {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        main {
+            display: grid;
+            min-height: calc(100vh - 84px);
+            place-items: center;
+            padding: 40px 20px;
+        }
+
+        .register-box {
+            width: 100%;
+            max-width: 430px;
+            padding: 38px;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            background: var(--bg-card);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent-green);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 27px;
+            font-weight: 650;
+            text-align: center;
+        }
+
+        .intro {
+            margin: 10px 0 26px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .field { margin-top: 17px; }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            min-height: 45px;
+            padding: 11px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background: var(--bg-dark);
+            color: var(--text);
+            font: inherit;
+            font-size: 14px;
+            transition: border-color 150ms ease, box-shadow 150ms ease;
+        }
+
+        input::placeholder { color: var(--muted); }
+
+        input:focus {
+            border-color: var(--accent-green);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(22, 136, 255, 0.18);
+        }
+
+        button {
+            width: 100%;
+            min-height: 46px;
+            margin-top: 24px;
+            border: 0;
+            border-radius: 5px;
+            background: var(--accent-green);
+            color: white;
+            cursor: pointer;
+            font: inherit;
+            font-size: 15px;
+            font-weight: 650;
+            transition: background-color 150ms ease;
+        }
+
+        button:hover { background: #1268c4; }
+        button:focus-visible { outline: 3px solid var(--accent-blue); outline-offset: 3px; }
+
+        .login-note {
+            margin: 23px 0 0;
+            color: var(--muted);
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .login-note a {
+            color: var(--accent-green);
+            font-weight: 650;
+            text-decoration: none;
+        }
+
+        .login-note a:hover { text-decoration: underline; }
+
+        .form-status {
+            margin: 16px 0 0;
+            color: var(--accent-green);
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .form-status:empty { display: none; }
+        .form-status.error { color: #ff9a9a; }
+
+        .server-help {
+            margin: 18px 0 0;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .server-help a {
+            color: var(--accent-blue);
+            font-weight: 650;
+        }
+
+        .server-help[hidden] { display: none; }
+
+        @media (max-width: 480px) {
+            header { min-height: 64px; padding: 0 20px; }
+            .logo { width: min(210px, 58vw); }
+            .header-note { font-size: 12px; }
+            main { min-height: calc(100vh - 72px); padding: 24px 16px; }
+            .register-box { padding: 30px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="topbar"></div>
+    <header>
+        <a href="index.html" class="logo" aria-label="PC Gamer Shop, inicio"><img src="assets/pc-gamer-shop-navbar-logo.png" alt="PC Gamer Shop"></a>
+        <span class="header-note">Tu tienda de tecnología</span>
+    </header>
+    <main>
+        <section class="register-box" aria-labelledby="register-title">
+            <p class="eyebrow">Crear cuenta</p>
+            <h1 id="register-title">Un mundo de tecnología</h1>
+            <p class="intro">Registrate para comenzar a disfrutar de nuestra tienda.</p>
+            <form id="register-form" action="/api/register" method="post" autocomplete="on">
+                <div class="field">
+                    <label for="name">Nombre completo</label>
+                    <input id="name" type="text" name="name" placeholder="Ingresá tu nombre" autocomplete="name" minlength="2" maxlength="80" required>
+                </div>
+                <div class="field">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" type="email" name="email" placeholder="nombre@ejemplo.com" autocomplete="email" maxlength="254" required>
+                </div>
+                <div class="field">
+                    <label for="password">Contraseña</label>
+                    <input id="password" type="password" name="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" minlength="8" maxlength="128" required>
+                </div>
+                <button type="submit">Crear cuenta</button>
+            </form>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+            <p id="server-help" class="server-help" hidden>El registro necesita que la tienda esté ejecutándose. Desde PowerShell, abrí la carpeta de la tienda y ejecutá <code>npm.cmd start</code>; después <a href="http://127.0.0.1:3000/register.html">abrí el registro desde el servidor</a>.</p>
+            <p class="login-note">¿Ya tenés una cuenta? <a href="login.html">Ingresá acá</a></p>
+            <p class="login-note">¿Necesitás ayuda? <a href="contact.html">Contactanos</a></p>
+        </section>
+    </main>
+    <script>
+        const form = document.getElementById("register-form");
+        const status = document.getElementById("form-status");
+
+        if (window.location.protocol === "file:") {
+            document.getElementById("server-help").hidden = false;
+        }
+
+        form.addEventListener("submit", async event => {
+            event.preventDefault();
+            const button = form.querySelector("button");
+            button.disabled = true;
+            status.classList.remove("error");
+            status.textContent = "Creando tu cuenta...";
+
+            try {
+                const response = await fetch(form.action, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(Object.fromEntries(new FormData(form)))
+                });
+                const result = await response.json();
+
+                if (!response.ok) {
+                    status.classList.add("error");
+                    status.textContent = result.error || "No se pudo crear la cuenta.";
+                    return;
+                }
+
+                form.reset();
+                window.location.assign("/");
+            } catch {
+                status.classList.add("error");
+                status.textContent = window.location.protocol === "file:"
+                    ? "No se puede registrar desde un archivo local. Iniciá la tienda con npm.cmd start y abrí el enlace al registro desde el servidor."
+                    : "No se pudo conectar con el servidor. Verificá que Node.js esté instalado y que la tienda siga ejecutándose con npm start.";
+            } finally {
+                button.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

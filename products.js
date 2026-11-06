@@ -1,0 +1,959 @@
+window.PCGS_PRODUCTS = [
+    {
+        "name": "Prime B650M-A II AM5 DDR5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": 200999,
+        "seller": "Venex",
+        "image": "assets/products/1793026956-diseno-sin-titulo-2026-10-26t115458621png-442aad964b.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:fqtk0v",
+        "description": "Motherboard micro-ATX con socket AM5 y memoria DDR5. Una base actualizable para equipos Ryzen."
+    },
+    {
+        "name": "Gigabyte B650M H AM5",
+        "brand": "Gigabyte",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": 164900,
+        "seller": "Crosshair Gaming",
+        "image": "assets/products/2cf54b88371e8396e8b9f56be3be2a7c-2763a1ef13.jpg",
+        "source": "https://www.hardgamers.com.ar/product/crosshairGaming:vipvln",
+        "description": "Motherboard compacta AM5 con soporte DDR5, pensada para procesadores AMD Ryzen compatibles."
+    },
+    {
+        "name": "GeForce RTX 5060 Windforce OC 8G",
+        "brand": "Gigabyte",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "NVIDIA",
+        "price": 841302,
+        "seller": "BracaTech",
+        "image": "assets/products/01-10-2026-03-10-31-geforcertx5060windforcemax8g-01-b1c6c8f241.webp",
+        "source": "https://www.hardgamers.com.ar/product/bracatech:5uwa30",
+        "description": "Placa de video con 8 GB GDDR7 y diseño Windforce con overclock de fábrica."
+    },
+    {
+        "name": "GeForce RTX 5060 Cyclone OC 8GB",
+        "brand": "MSI",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "NVIDIA",
+        "price": 847500,
+        "seller": "Diamond System",
+        "image": "assets/products/image-1-f7c4368918.jpg",
+        "source": "https://www.hardgamers.com.ar/product/diamond:2689",
+        "description": "Placa de video MSI GeForce RTX 5060 con 8 GB, pensada para juegos en Full HD."
+    },
+    {
+        "name": "Fury Beast 32GB DDR5 5600MHz RGB",
+        "brand": "Kingston",
+        "category": "Memorias RAM",
+        "subcategory": "DDR5",
+        "price": 879999,
+        "seller": "RM Insumos",
+        "image": "assets/products/images-af70af61b9.jpg",
+        "source": "https://www.hardgamers.com.ar/product/rminsumos:3350",
+        "description": "Módulo Kingston Fury Beast de 32 GB DDR5 a 5600 MT/s con iluminación RGB."
+    },
+    {
+        "name": "Fury Beast 32GB DDR5 6000MHz",
+        "brand": "Kingston",
+        "category": "Memorias RAM",
+        "subcategory": "DDR5",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/thumb-49fba28773.jpg",
+        "source": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory",
+        "description": "Memoria Kingston Fury Beast DDR5 de 32 GB y 6000 MT/s, compatible con plataformas DDR5. Confirmá perfil XMP/EXPO y compatibilidad con la placa madre."
+    },
+    {
+        "name": "Fury Beast 16GB DDR4 3200MHz",
+        "brand": "Kingston",
+        "category": "Memorias RAM",
+        "subcategory": "DDR4",
+        "price": 329700,
+        "seller": "HardCore",
+        "image": "assets/products/ddr4-kingston-fury-beast-2-77b76d2798.jpg",
+        "source": "https://www.hardgamers.com.ar/product/hardcore:wc-40636",
+        "description": "Memoria DDR4 de 16 GB a 3200 MT/s, una opción para actualizar equipos compatibles."
+    },
+    {
+        "name": "Gabinete C102 Glass X2 Fan Black",
+        "brand": "Gigabyte",
+        "category": "Periférico",
+        "subcategory": "Gabinetes",
+        "price": 66400,
+        "seller": "MyM Computacion",
+        "image": "assets/products/18-09-2024-03-09-30-0000000000004719331554835-5-95dad2b7c6.png",
+        "source": "https://www.hardgamers.com.ar/product/mmcomputacion:pwzhv8",
+        "description": "Gabinete compacto con panel de vidrio templado y dos ventiladores incluidos."
+    },
+    {
+        "name": "MAG Forge M100A 4x Fan ARGB",
+        "brand": "MSI",
+        "category": "Periférico",
+        "subcategory": "Gabinetes",
+        "price": 54380,
+        "seller": "SilverHard",
+        "image": "assets/products/gab526-1598a65b78.png",
+        "source": "https://www.hardgamers.com.ar/product/silverHard:d1rsn8",
+        "description": "Gabinete micro-ATX con cuatro ventiladores ARGB para mejorar el flujo de aire."
+    },
+    {
+        "name": "MAG 242C 24 pulgadas Full HD 180Hz",
+        "brand": "MSI",
+        "category": "Periférico",
+        "subcategory": "Monitores",
+        "price": 205999,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-monitor-gamer-24-msi-curvo-full-hd-ips-180hz-1m-bfa95e7630.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:hgbv36",
+        "description": "Monitor gamer curvo de 24 pulgadas, resolución Full HD y frecuencia de actualización de 180 Hz."
+    },
+    {
+        "name": "TUF Gaming VG249QL3A-J 24 pulgadas 180Hz",
+        "brand": "ASUS",
+        "category": "Periférico",
+        "subcategory": "Monitores",
+        "price": 285959,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-monitor-gamer-24-asus-tuf-gaming-full-hd-180hz--e3a53b57cf.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:fyo26m",
+        "description": "Monitor ASUS TUF de 24 pulgadas, panel IPS Full HD y 180 Hz para una imagen fluida."
+    },
+    {
+        "name": "Prime B550M-K ARGB AM4 DDR4",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": 139999,
+        "seller": "Venex",
+        "image": "assets/products/1774295101-motherboard-asus-prime-b550m-k-argb-am4-d-52c805c9e9.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:zbhqho",
+        "description": "Socket AM4 para Ryzen compatibles, memoria DDR4, formato micro-ATX y ranura M.2 para SSD NVMe."
+    },
+    {
+        "name": "Biostar B550M-H 3.0 AM4",
+        "brand": "Biostar",
+        "category": "Placa madre",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": 119880,
+        "seller": "Maximus Gaming Hardware",
+        "image": "assets/products/b550mh-3-0-7f249404a4.jpg",
+        "source": "https://www.hardgamers.com.ar/product/maximus:4712960682627",
+        "description": "Placa micro-ATX AM4 con chipset B550 y soporte para memorias DDR4. Verificá compatibilidad con el procesador elegido."
+    },
+    {
+        "name": "B650M Phantom Gaming Lightning WiFi AM5",
+        "brand": "ASRock",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": 247999,
+        "seller": "Venex",
+        "image": "assets/products/1793190398-motherboard-asrock-b650m-phantom-gaming-l-07feee852d.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:qzy3oi",
+        "description": "Socket AM5, DDR5, conectividad Wi-Fi integrada y formato micro-ATX para procesadores Ryzen compatibles."
+    },
+    {
+        "name": "ASRock B650 Pro RS WiFi AM5 DDR5",
+        "brand": "ASRock",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "ATX",
+        "price": 294990,
+        "seller": "Venex",
+        "image": "assets/products/1786558634-motherboard-asrock-b650-pro-rs-wifi-am5-d-266716f105.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:rxaz66",
+        "description": "Placa ATX AM5 con DDR5, Wi-Fi integrado y conectividad para equipos Ryzen compatibles."
+    },
+    {
+        "name": "ASUS ROG Crosshair X870E Extreme AM5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "E-ATX",
+        "price": null,
+        "seller": "Consultar precio en ASUS",
+        "image": "assets/products/pd-f4df77ee45.png",
+        "source": "https://rog.asus.com/motherboards/rog-crosshair/rog-crosshair-x870e-extreme/",
+        "description": "Placa E-ATX de alta gama para Ryzen serie 9000, socket AM5, DDR5 y PCIe 5.0. El precio local depende de disponibilidad."
+    },
+    {
+        "name": "MSI PRO H610M-S DDR4 LGA1700",
+        "brand": "MSI",
+        "category": "Placa madre",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "Intel",
+        "formFactor": "M-ATX",
+        "price": 115000,
+        "seller": "Logg",
+        "image": "assets/products/945774df7b93465cb17569880e8928fc-192d2f7828.webp",
+        "source": "https://www.hardgamers.com.ar/product/logg:lxvoj1",
+        "description": "Socket Intel LGA1700, memoria DDR4 y formato micro-ATX. Compatible con generaciones Intel indicadas por el fabricante."
+    },
+    {
+        "name": "ASUS PRIME H610M-K LGA1700 DDR5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "formFactor": "M-ATX",
+        "price": 126999,
+        "seller": "Logg",
+        "image": "assets/products/bb10ccb07d3d4bc3902362a301efd690-736bed60e1.webp",
+        "source": "https://www.hardgamers.com.ar/product/logg:pa8wqc",
+        "description": "Motherboard micro-ATX para Intel LGA1700 con soporte DDR5 y almacenamiento M.2."
+    },
+    {
+        "name": "ASUS PRIME H810M-E LGA1851",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "Intel 1851",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "formFactor": "M-ATX",
+        "price": 165869,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-motherboard-intel-socket-asus-prime-h810m-e-512-45f263270d.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:33tk5z",
+        "description": "Socket Intel LGA1851, chipset H810 y formato micro-ATX. Diseñada para procesadores Intel Core Ultra compatibles."
+    },
+    {
+        "name": "Gigabyte H810M K DDR5 LGA1851",
+        "brand": "Gigabyte",
+        "category": "Placa madre",
+        "subcategory": "Intel 1851",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "formFactor": "M-ATX",
+        "price": 144139,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-motherboard-intel-socket-lga1851-gigabyte-h810m-79d27c4bc7.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:ccvhq4",
+        "description": "Socket LGA1851 con DDR5 y formato micro-ATX. Revisá la lista de procesadores compatibles antes de comprar."
+    },
+    {
+        "name": "ASRock B650I Lightning WiFi AM5 DDR5",
+        "brand": "ASRock",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "Mini-ITX",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-0ce79706e6.jpg",
+        "source": "https://www.asrock.com/mb/AMD/B650I%20Lightning%20WiFi/",
+        "description": "Placa Mini-ITX AM5 con DDR5, Wi-Fi integrado y ranura M.2 PCIe 5.0. Compatible con procesadores Ryzen AM5."
+    },
+    {
+        "name": "ASUS ROG Strix B650E-I Gaming WiFi AM5 DDR5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "Mini-ITX",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-123f68503b.jpg",
+        "source": "https://rog.asus.com/motherboards/rog-strix/rog-strix-b650e-i-gaming-wifi-model/",
+        "description": "Motherboard Mini-ITX AM5 con DDR5, conectividad Wi-Fi y PCIe 5.0. Verificá el espacio disponible en el gabinete."
+    },
+    {
+        "name": "MSI MPG B650I Edge WiFi AM5 DDR5",
+        "brand": "MSI",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "Mini-ITX",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-c36ccf1d9d.jpg",
+        "source": "https://www.msi.com/Motherboard/MPG-B650I-EDGE-WIFI",
+        "description": "Placa Mini-ITX para Ryzen AM5 con memoria DDR5, Wi-Fi integrado y conectores M.2."
+    },
+    {
+        "name": "Gigabyte B650I AORUS Ultra AM5 DDR5",
+        "brand": "Gigabyte",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "Mini-ITX",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-34fb0daded.jpg",
+        "source": "https://www.gigabyte.com/Motherboard/B650I-AORUS-ULTRA",
+        "description": "Motherboard Mini-ITX AM5 con DDR5, Wi-Fi y almacenamiento M.2. Revisá la versión de BIOS y la compatibilidad con tu Ryzen."
+    },
+    {
+        "name": "AMD Ryzen 5 5600 AM4",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "price": 219922,
+        "seller": "Amonpul Team",
+        "image": "assets/products/producto-foto-13112-bb9f3a12db.webp",
+        "source": "https://www.hardgamers.com.ar/product/amonpulTeam:v54rwc",
+        "description": "Procesador AM4 de 6 núcleos y 12 hilos, hasta 4,4 GHz. Usa memoria DDR4; requiere placa de video dedicada."
+    },
+    {
+        "name": "AMD Ryzen 7 7700 AM5",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "price": 499990,
+        "seller": "Venex",
+        "image": "assets/products/1787833227-procesador-amd-ryzen-7-7700-816-53ghz-am5-33a47b3934.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:3prfig",
+        "description": "Procesador AM5 de 8 núcleos y 16 hilos con boost de hasta 5,3 GHz y gráficos integrados básicos."
+    },
+    {
+        "name": "AMD Ryzen 5 7600 AM5",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-5becc56187.jpg",
+        "source": "https://www.amd.com/en/products/processors/desktops/ryzen/7000-series/amd-ryzen-5-7600.html",
+        "description": "Procesador AM5 de 6 núcleos y 12 hilos con gráficos Radeon integrados. Requiere placa madre AM5 y memoria DDR5."
+    },
+    {
+        "name": "AMD Ryzen 5 5500 AM4",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "price": 171990,
+        "seller": "Venex",
+        "image": "assets/products/images-946e2d424d.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-amd-ryzen-5-5500",
+        "description": "Procesador AM4 de 6 núcleos y 12 hilos, hasta 4,2 GHz. Usa DDR4 y no incluye gráficos integrados; requiere placa de video dedicada."
+    },
+    {
+        "name": "AMD Ryzen 5 5600X AM4",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "price": 350539,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-f45d61ff03.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-amd-ryzen-5-5600x",
+        "description": "CPU AM4 de 6 núcleos y 12 hilos con boost de hasta 4,6 GHz. Compatible con memoria DDR4; no incluye gráficos integrados."
+    },
+    {
+        "name": "AMD Ryzen 7 5700X AM4",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "price": 370880,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-adde07be42.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-amd-ryzen-7-5700x",
+        "description": "Procesador AM4 de 8 núcleos y 16 hilos con boost de hasta 4,6 GHz. Usa DDR4 y necesita una tarjeta gráfica dedicada."
+    },
+    {
+        "name": "AMD Ryzen 7 5700X3D AM4",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "price": 652413,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-627eb6ab1e.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-amd-ryzen-7-5700x3d",
+        "description": "CPU AM4 de 8 núcleos y 16 hilos con tecnología 3D V-Cache, boost de hasta 4,1 GHz y soporte DDR4. No incluye gráficos integrados."
+    },
+    {
+        "name": "AMD Ryzen 7 7800X3D AM5",
+        "brand": "AMD",
+        "category": "Procesadores",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "price": 830550,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-4e9eca457b.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-amd-ryzen-7-7800x3d",
+        "description": "Procesador AM5 de 8 núcleos y 16 hilos con 3D V-Cache y boost de hasta 5 GHz. Requiere DDR5; incluye gráficos Radeon básicos."
+    },
+    {
+        "name": "Intel Core i5-12400F LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 279990,
+        "seller": "Venex",
+        "image": "assets/products/1662383616-intel-i5-12ca-aa9e30b287.jpg",
+        "source": "https://www.hardgamers.com.ar/product/venex:sdcqlf",
+        "description": "CPU Intel LGA1700 de 6 núcleos y 12 hilos, hasta 4,4 GHz. Admite DDR4 o DDR5 según la placa madre; la variante F no incluye gráficos integrados."
+    },
+    {
+        "name": "Intel Core Ultra 5 225F LGA1851",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1851",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 282999,
+        "seller": "Venex",
+        "image": "assets/products/1764760114-ultra5-e63efeef6b.jpg",
+        "source": "https://www.hardgamers.com.ar/product/venex:6hvlxa",
+        "description": "Procesador Intel de socket LGA1851 con 10 núcleos y frecuencia turbo de hasta 4,9 GHz. La versión F requiere GPU dedicada."
+    },
+    {
+        "name": "Intel Core i3-12100F LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 178500,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-309e06df2a.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-intel-core-i3-12100f",
+        "description": "Procesador Intel LGA1700 de 4 núcleos y 8 hilos, hasta 4,3 GHz. La memoria admitida depende de la placa madre; la variante F no tiene gráficos integrados."
+    },
+    {
+        "name": "Intel Core i5-13400F LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 288614,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-6d01846a52.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-intel-core-i5-13400f",
+        "description": "CPU LGA1700 de 10 núcleos y 16 hilos con boost de hasta 4,6 GHz. Compatible con DDR4 o DDR5 según la placa; la variante F requiere GPU dedicada."
+    },
+    {
+        "name": "Intel Core i5-14400F LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 286350,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-c2b2dc5386.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-intel-core-i5-14400f",
+        "description": "Procesador Intel LGA1700 de 10 núcleos y 16 hilos con turbo de hasta 4,7 GHz. Soporta DDR4 o DDR5 según la motherboard; la versión F no integra gráficos."
+    },
+    {
+        "name": "Intel Core i7-13700K LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 1834000,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-e6c5acedc9.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-intel-core-i7-13700k",
+        "description": "CPU LGA1700 de 16 núcleos y 24 hilos con turbo de hasta 5,4 GHz y gráficos Intel UHD 770. La memoria puede ser DDR4 o DDR5 según la placa madre."
+    },
+    {
+        "name": "Intel Core Ultra 7 265K LGA1851",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1851",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": 597999,
+        "seller": "Precio de referencia · Mercado local",
+        "image": "assets/products/images-9ae24186f0.jpg",
+        "source": "https://listado.mercadolibre.com.ar/procesador-intel-core-ultra-7-265k",
+        "description": "Procesador LGA1851 de 20 núcleos y 20 hilos con turbo de hasta 5,5 GHz. Usa memoria DDR5 y cuenta con gráficos Intel integrados."
+    },
+    {
+        "name": "Intel Core i7-14700K LGA1700",
+        "brand": "Intel",
+        "category": "Procesadores",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR4",
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-04303a138d.jpg",
+        "source": "https://www.intel.com/content/www/us/en/products/sku/236783/intel-core-i7-processor-14700k-33m-cache-up-to-5-60-ghz/specifications.html",
+        "description": "Procesador Intel LGA1700 de 20 núcleos y 28 hilos. Puede usar DDR4 o DDR5 según el modelo de placa madre; requiere refrigeración adecuada."
+    },
+    {
+        "name": "NVIDIA GeForce RTX 5070 Founders Edition 12GB",
+        "brand": "NVIDIA",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "NVIDIA",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-b9c10e46f3.jpg",
+        "source": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/",
+        "description": "Placa de video GeForce RTX 5070 con 12 GB de memoria GDDR7. Comprobá dimensiones, conectores y potencia recomendada para tu equipo."
+    },
+    {
+        "name": "ASUS PRIME Radeon RX 9060 XT 8GB OC",
+        "brand": "ASUS",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "AMD",
+        "price": 774990,
+        "seller": "Venex",
+        "image": "assets/products/1758802002-5-252a99e75c.jpg",
+        "source": "https://www.hardgamers.com.ar/product/venex:i4vlkq",
+        "description": "Placa Radeon RX 9060 XT con 8 GB GDDR6 y overclock de fábrica. Revisá dimensiones y fuente recomendada."
+    },
+    {
+        "name": "Gigabyte Radeon RX 9060 XT 8GB OC",
+        "brand": "Gigabyte",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "AMD",
+        "price": 839990,
+        "seller": "HF Tecnologia",
+        "image": "assets/products/1-108-9ad38078c5.jpg",
+        "source": "https://www.hardgamers.com.ar/product/hfTecnologia:wc-3546",
+        "description": "GPU Radeon RX 9060 XT de 8 GB GDDR6 con tres ventiladores y overclock de fábrica."
+    },
+    {
+        "name": "ASRock Intel Arc B580 Challenger OC 12GB",
+        "brand": "ASRock",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "Intel",
+        "price": 639990,
+        "seller": "Venex",
+        "image": "assets/products/1780681034-diseno-sin-titulo-2026-06-05t143657570png-cd1a246889.png",
+        "source": "https://www.hardgamers.com.ar/product/venex:ahs8yp",
+        "description": "GPU Intel Arc B580 con 12 GB GDDR6 y diseño ASRock Challenger con overclock."
+    },
+    {
+        "name": "ASRock Intel Arc B580 Challenger OC 12GB",
+        "brand": "ASRock",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa de video",
+        "platform": "Intel",
+        "price": 695694,
+        "seller": "SilverHard",
+        "image": "assets/products/vga991-8a3c23d64b.png",
+        "source": "https://www.hardgamers.com.ar/product/silverHard:hokb97",
+        "description": "La misma Arc B580 Challenger de 12 GB publicada por otra tienda para comparar precio y disponibilidad."
+    },
+    {
+        "name": "TP-Link TL-WN781ND PCIe Wi-Fi N",
+        "brand": "TP-Link",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa Wi-Fi",
+        "platform": "Wi-Fi",
+        "price": 12480,
+        "seller": "Full H4rd",
+        "image": "assets/products/tp-link-tl-wn781nd-official.jpg",
+        "source": "https://www.hardgamers.com.ar/product/fullh4rd:dwdkrv",
+        "description": "Adaptador PCI Express x1 de 2,4 GHz y hasta 150 Mbps, con antena desmontable. No incluye Bluetooth."
+    },
+    {
+        "name": "TP-Link Archer TX20E Wi-Fi 6 + Bluetooth 5.2",
+        "brand": "TP-Link",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa Wi-Fi + Bluetooth",
+        "platform": "Wi-Fi",
+        "price": 43000,
+        "seller": "Logg",
+        "image": "assets/products/archer-t5e-un-2-6-overview-01-large-20250327033757r-bdefaeee1e.jpg",
+        "source": "https://www.hardgamers.com.ar/product/logg:9mgg9a",
+        "description": "Adaptador PCIe Wi-Fi 6 de doble banda hasta 1800 Mbps, dos antenas externas y Bluetooth 5.2. Compatible con Windows 10/11 de 64 bits."
+    },
+    {
+        "name": "TP-Link Archer TXE75E Wi-Fi 6E + Bluetooth",
+        "brand": "TP-Link",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa Wi-Fi + Bluetooth",
+        "platform": "Wi-Fi",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-5ee385a4c1.jpg",
+        "source": "https://www.tp-link.com/us/home-networking/pci-adapter/archer-txe75e/",
+        "description": "Adaptador PCIe Wi-Fi 6E de tres bandas con Bluetooth. Necesita un conector USB interno para habilitar Bluetooth; verificá compatibilidad del sistema operativo."
+    },
+    {
+        "name": "Logitech G203 Lightsync USB negro",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mouse",
+        "platform": "Periférico",
+        "price": 28094,
+        "seller": "Acuario Insumos",
+        "image": "assets/products/825321-mla92846503895-092025-f-96e9be3a1c.jpg",
+        "source": "https://www.hardgamers.com.ar/product/acuarioInsumos:sheq4f",
+        "description": "Mouse gamer USB con sensor de hasta 8000 DPI, seis botones programables e iluminación Lightsync RGB."
+    },
+    {
+        "name": "Logitech G203 Lightsync USB blanco",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mouse",
+        "platform": "Periférico",
+        "price": 29449,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-mouse-gamer-logitech-g203-lightsync-blanco-3824-6aecef4eff.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:wihbct",
+        "description": "Versión blanca del mouse óptico G203: conexión USB, hasta 8000 DPI y RGB configurable."
+    },
+    {
+        "name": "Logitech G502 HERO",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mouse",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio actualizado",
+        "image": "assets/products/images-4dd62b4ec2.jpg",
+        "source": "https://www.logitechg.com/en-us/products/gaming-mice/g502-hero-gaming-mouse.html",
+        "description": "Mouse gamer con sensor HERO de hasta 25.600 DPI, 11 botones programables y pesos ajustables."
+    },
+    {
+        "name": "Logitech G213 Prodigy RGB Español",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Teclados",
+        "platform": "Periférico",
+        "price": 64299,
+        "seller": "Mexx",
+        "image": "assets/products/tumb-40801-1-b61a04a7c7.jpg",
+        "source": "https://www.hardgamers.com.ar/product/mexx:eeuupm",
+        "description": "Teclado de tamaño completo con distribución española, teclas resistentes a salpicaduras e iluminación RGB."
+    },
+    {
+        "name": "Logitech G213 Prodigy RGB",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Teclados",
+        "platform": "Periférico",
+        "price": 66326,
+        "seller": "Megasoft",
+        "image": "assets/products/640406-mla32722390709-102019-f-593c79f86b.jpg",
+        "source": "https://www.hardgamers.com.ar/product/megasoft:smt6j5",
+        "description": "Teclado gamer USB completo con iluminación RGB y controles multimedia dedicados."
+    },
+    {
+        "name": "Logitech Cloth G2 340 x 280 mm",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mousepads",
+        "platform": "Periférico",
+        "price": 26256,
+        "seller": "Acuario Insumos",
+        "image": "assets/products/813799-mla92891715357-092025-f-f5f3243b6f.jpg",
+        "source": "https://www.hardgamers.com.ar/product/acuarioInsumos:dlvqjf",
+        "description": "Mousepad de tela de 340 x 280 mm con base antideslizante, adecuado para escritorios compactos."
+    },
+    {
+        "name": "Logitech G840 XL Gaming Pad",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mousepads",
+        "platform": "Periférico",
+        "price": 108448,
+        "seller": "Megasoft",
+        "image": "assets/products/928723-mla95221911870-102025-f-485d1c930a.jpg",
+        "source": "https://www.hardgamers.com.ar/product/megasoft:abocre",
+        "description": "Superficie gamer XL antideslizante que cubre una zona amplia del escritorio para mouse y teclado."
+    },
+    {
+        "name": "Logitech C920S Pro HD",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Cámaras",
+        "platform": "Periférico",
+        "price": 130000,
+        "seller": "Space",
+        "image": "assets/products/1058-producto-d-nq-np-961933-mla41162420531-032020-o-8d030eccc3.jpg",
+        "source": "https://www.hardgamers.com.ar/product/spaceVideojuegos:mj6fik",
+        "description": "Webcam Full HD 1080p con enfoque automático, micrófonos estéreo y tapa de privacidad."
+    },
+    {
+        "name": "Logitech C920S HD Pro 1080p",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Cámaras",
+        "platform": "Periférico",
+        "price": 135999,
+        "seller": "Venex",
+        "image": "assets/products/1568831533-hukj-84812bf8ec.jpg",
+        "source": "https://www.hardgamers.com.ar/product/venex:tjwr24",
+        "description": "Cámara web USB Full HD 1080p con micrófono estéreo integrado y obturador de privacidad."
+    },
+    {
+        "name": "ASUS TUF Gaming B650M-Plus WiFi AM5 DDR5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/kv-main-7338f87afe.png",
+        "source": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-b650m-plus-wifi/",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Motherboard micro-ATX para Ryzen AM5 con DDR5, Wi-Fi integrado y opciones PCIe 5.0. Verificá la versión de BIOS y la compatibilidad con el procesador elegido."
+    },
+    {
+        "name": "ASUS Prime B550M-A WiFi II AM4 DDR4",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "AMD AM4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "platform": "AMD",
+        "formFactor": "M-ATX",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/intro-main-40edb7cd49.png",
+        "source": "https://www.asus.com/motherboards-components/motherboards/prime/prime-b550m-a-wifi-ii/",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Motherboard micro-ATX AM4 con DDR4, Wi-Fi 6 y dos ranuras M.2. Compatible con varias generaciones Ryzen; confirmá la lista de CPU y la BIOS."
+    },
+    {
+        "name": "ASUS TUF Gaming Z790-Plus WiFi LGA1700 DDR5",
+        "brand": "ASUS",
+        "category": "Placa madre",
+        "subcategory": "Intel 1700",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "platform": "Intel",
+        "formFactor": "ATX",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/kv-main-8a7107d24f.png",
+        "source": "https://www.asus.com/motherboards-components/motherboards/tuf-gaming/tuf-gaming-z790-plus-wifi/",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Motherboard ATX para Intel Core de 12.ª, 13.ª y 14.ª generación, socket LGA1700 y DDR5. Incluye Wi-Fi 6E; no es compatible con memorias DDR4."
+    },
+    {
+        "name": "Kingston Fury Beast 8GB DDR4 3200MHz",
+        "brand": "Kingston",
+        "category": "Memorias RAM",
+        "subcategory": "DDR4",
+        "memoryTypes": [
+            "DDR4"
+        ],
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/ddr4-kingston-fury-beast-2-77b76d2798.jpg",
+        "source": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr4-memory",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Módulo individual de 8 GB DDR4 a 3200 MT/s, una opción para ampliar equipos compatibles. Confirmá el formato DIMM y la capacidad admitida por la placa madre."
+    },
+    {
+        "name": "Kingston Fury Beast 16GB DDR5 5600MHz RGB",
+        "brand": "Kingston",
+        "category": "Memorias RAM",
+        "subcategory": "DDR5",
+        "memoryTypes": [
+            "DDR5"
+        ],
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/images-af70af61b9.jpg",
+        "source": "https://www.kingston.com/en/memory/gaming/kingston-fury-beast-ddr5-memory",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Módulo de 16 GB DDR5 con disipador e iluminación RGB. La velocidad efectiva y los perfiles XMP/EXPO dependen de la placa madre y el procesador."
+    },
+    {
+        "name": "TP-Link Archer T4E PCIe Wi-Fi AC1200",
+        "brand": "TP-Link",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa Wi-Fi",
+        "platform": "Wi-Fi",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/1-large-1544062541944w-bba0c6cc5e.jpg",
+        "source": "https://www.tp-link.com/us/home-networking/pci-adapter/archer-t4e/",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Adaptador PCIe de doble banda AC1200 con dos antenas externas y soporte de perfil bajo. No incluye Bluetooth; la imagen es ilustrativa."
+    },
+    {
+        "name": "TP-Link Archer T5E PCIe Wi-Fi AC1200 + Bluetooth 5.0",
+        "brand": "TP-Link",
+        "category": "Componentes de Hardware",
+        "subcategory": "Placa Wi-Fi + Bluetooth",
+        "platform": "Wi-Fi",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/68d171a5dec542d587809c081ccd93ca-3e40d8c8aa.webp",
+        "source": "https://www.tp-link.com/us/home-networking/pci-adapter/archer-t5e/",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Adaptador PCIe de doble banda AC1200 con Bluetooth 5.0 y dos antenas externas. Revisá que la PC tenga una ranura PCIe libre y el conector interno necesario para Bluetooth; la imagen es ilustrativa."
+    },
+    {
+        "name": "Logitech Brio 100 Full HD 1080p grafito",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Cámaras",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/brio-100-overview-0d6a04dd0c.png",
+        "source": "https://www.logitech.com/en-us/products/webcams/brio-100-webcam.960-001585.html",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Webcam USB Full HD 1080p con ajuste automático de iluminación, micrófono integrado y tapa de privacidad. Diseño compacto para videollamadas y clases."
+    },
+    {
+        "name": "Logitech C922 Pro Stream Full HD",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Cámaras",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/c922-pro-intro-5733547fa8.jpg",
+        "source": "https://www.logitech.com/en-us/products/webcams/c922-pro-stream-webcam.960-001087.html",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Webcam orientada a streaming con video 1080p a 30 fps o 720p a 60 fps, enfoque automático y micrófonos integrados."
+    },
+    {
+        "name": "Logitech G240 Mousepad de tela 340 x 280 mm",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mousepads",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/g240-feature-1-new-6427641baf.jpg",
+        "source": "https://www.logitechg.com/en-us/products/gaming-mouse-pads/g240-cloth-gaming-mouse-pad.html",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Mousepad compacto de tela de 340 x 280 mm con base de goma antideslizante y superficie optimizada para movimientos precisos."
+    },
+    {
+        "name": "Logitech G640 Mousepad de tela 400 x 460 mm",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mousepads",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/g640-feature-1-new-132e0dd592.jpg",
+        "source": "https://www.logitechg.com/en-us/products/gaming-mouse-pads/g640-cloth-gaming-mouse-pad.html",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Mousepad grande de tela de 400 x 460 mm, pensado para escritorios amplios y movimientos de baja sensibilidad. Base de goma para mantenerlo firme."
+    },
+    {
+        "name": "Logitech G440 Mousepad rígido 280 x 340 mm",
+        "brand": "Logitech",
+        "category": "Periférico",
+        "subcategory": "Mousepads",
+        "platform": "Periférico",
+        "price": null,
+        "seller": "Consultar precio y stock",
+        "image": "assets/products/g440-feature-1-new-cd83ae458c.jpg",
+        "source": "https://www.logitechg.com/en-us/products/gaming-mouse-pads/g440-hard-gaming-mouse-pad.html",
+        "sourceLabel": "Ver ficha oficial",
+        "description": "Mousepad mediano de superficie rígida de 280 x 340 mm y baja fricción, una alternativa a los modelos de tela para movimientos rápidos."
+    }
+];

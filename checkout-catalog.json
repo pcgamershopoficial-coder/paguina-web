@@ -1,0 +1,228 @@
+{
+  "AMD Ryzen 5 5600 AM4": [
+    281808
+  ],
+  "AMD Ryzen 7 7700 AM5": [
+    619841
+  ],
+  "AMD Ryzen 5 7600 AM5": [
+    437242
+  ],
+  "AMD Ryzen 5 5500 AM4": [
+    202054
+  ],
+  "AMD Ryzen 5 5600X AM4": [
+    288104
+  ],
+  "AMD Ryzen 7 5700X AM4": [
+    303964
+  ],
+  "AMD Ryzen 7 7800X3D AM5": [
+    838481
+  ],
+  "AMD Ryzen 5 5600GT AM4": [
+    356053
+  ],
+  "AMD Ryzen 5 5600T AM4": [
+    314024
+  ],
+  "AMD Ryzen 5 5600XT AM4": [
+    336732
+  ],
+  "AMD Ryzen 7 5700 AM4": [
+    304114
+  ],
+  "AMD Ryzen 7 5700G AM4": [
+    425362
+  ],
+  "AMD Ryzen 7 5800XT AM4": [
+    512711
+  ],
+  "AMD Ryzen 7 5800X3D AM4": [
+    764523
+  ],
+  "AMD Ryzen 5 4500 AM4": [
+    165709
+  ],
+  "AMD Ryzen 3 3200G AM4": [
+    135481
+  ],
+  "AMD Ryzen 5 8400F AM5": [
+    324756
+  ],
+  "AMD Ryzen 5 8500G AM5": [
+    315330
+  ],
+  "AMD Ryzen 5 8600G AM5": [
+    368583
+  ],
+  "AMD Ryzen 7 8700F AM5": [
+    486943
+  ],
+  "AMD Ryzen 7 8700G AM5": [
+    502897
+  ],
+  "AMD Ryzen 5 9600 AM5": [
+    462073
+  ],
+  "AMD Ryzen 5 9600X AM5": [
+    418265
+  ],
+  "AMD Ryzen 7 9700X AM5": [
+    539234
+  ],
+  "AMD Ryzen 7 9800X3D AM5": [
+    961718
+  ],
+  "AMD Ryzen 7 9850X3D AM5": [
+    1056777
+  ],
+  "AMD Ryzen 9 9900X AM5": [
+    805233
+  ],
+  "AMD Ryzen 9 9900X3D AM5": [
+    1174849
+  ],
+  "AMD Ryzen 9 9950X3D AM5": [
+    1471063
+  ],
+  "Prime B650M-A II AM5 DDR5": [
+    200999
+  ],
+  "Gigabyte B650M H AM5": [
+    164900
+  ],
+  "Prime B550M-K ARGB AM4 DDR4": [
+    139999
+  ],
+  "Biostar B550M-H 3.0 AM4": [
+    119880
+  ],
+  "B650M Phantom Gaming Lightning WiFi AM5": [
+    247999
+  ],
+  "ASRock B650 Pro RS WiFi AM5 DDR5": [
+    294990
+  ],
+  "Fury Beast 32GB DDR5 5600MHz RGB": [
+    879999
+  ],
+  "Fury Beast 16GB DDR4 3200MHz": [
+    329700
+  ],
+  "GeForce RTX 5060 Windforce OC 8G": [
+    841302
+  ],
+  "GeForce RTX 5060 Cyclone OC 8GB": [
+    847500
+  ],
+  "ASUS PRIME Radeon RX 9060 XT 8GB OC": [
+    774990
+  ],
+  "Gigabyte Radeon RX 9060 XT 8GB OC": [
+    839990
+  ],
+  "ASRock Intel Arc B580 Challenger OC 12GB": [
+    639990,
+    695694
+  ],
+  "Intel Core i5-12400F LGA1700": [
+    316453
+  ],
+  "Intel Core Ultra 5 225F LGA1851": [
+    364356
+  ],
+  "Intel Core i3-12100F LGA1700": [
+    189199
+  ],
+  "Intel Core i5-14400F LGA1700": [
+    406806
+  ],
+  "Intel Core i7-13700K LGA1700": [
+    1743400
+  ],
+  "Intel Core Ultra 7 265K LGA1851": [
+    597999
+  ],
+  "Intel Core i7-14700K LGA1700": [
+    962484
+  ],
+  "Intel Core i5-12400 LGA1700": [
+    376929
+  ],
+  "Intel Core i5-12400T LGA1700": [
+    371816
+  ],
+  "Intel Core i3-13100F LGA1700": [
+    212021
+  ],
+  "Intel Core i3-14100 LGA1700": [
+    305458
+  ],
+  "Intel Core i3-14100F LGA1700": [
+    225871
+  ],
+  "Intel Core i5-14400 LGA1700": [
+    460026
+  ],
+  "Intel Core i5-14600KF LGA1700": [
+    560162
+  ],
+  "Intel Core i7-12700 LGA1700": [
+    722953
+  ],
+  "Intel Core i7-12700KF LGA1700": [
+    706960
+  ],
+  "Intel Core i7-14700 LGA1700": [
+    848295
+  ],
+  "Intel Core i7-14700F LGA1700": [
+    821111
+  ],
+  "Intel Core i9-12900 LGA1700": [
+    1065849
+  ],
+  "Intel Core i9-12900F LGA1700": [
+    962352
+  ],
+  "Intel Core i9-14900 LGA1700": [
+    1361063
+  ],
+  "Intel Core Ultra 5 225 LGA1851": [
+    424482
+  ],
+  "Intel Core Ultra 5 245K LGA1851": [
+    481911
+  ],
+  "Intel Core Ultra 5 245KF LGA1851": [
+    443580
+  ],
+  "Intel Core Ultra 5 250K LGA1851": [
+    500698
+  ],
+  "Intel Core Ultra 5 250KF LGA1851": [
+    475352
+  ],
+  "Intel Core Ultra 7 265 LGA1851": [
+    852924
+  ],
+  "Intel Core Ultra 7 265F LGA1851": [
+    833489
+  ],
+  "Intel Core Ultra 9 285K LGA1851": [
+    1513513
+  ],
+  "MSI PRO H610M-S DDR4 LGA1700": [
+    115000
+  ],
+  "ASUS PRIME H610M-K LGA1700 DDR5": [
+    126999
+  ],
+  "ASUS PRIME H810M-E LGA1851": [
+    165869
+  ],
+  "Gigabyte H810M K DDR5 LGA1851": [
+    144139
+  ]
+}

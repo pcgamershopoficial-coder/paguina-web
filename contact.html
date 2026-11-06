@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0f19">
+    <title>Contactanos | PC Gamer Shop</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg-dark: #0b0f19;
+            --bg-card: #111d31;
+            --blue: #1688ff;
+            --blue-light: #49b8ff;
+            --text-main: #f8fafc;
+            --text-muted: #a4b4ca;
+            --border: #263b58;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            font-family: "Segoe UI", system-ui, sans-serif;
+        }
+
+        a { color: var(--blue-light); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .site-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            padding: 0.8rem clamp(1rem, 4vw, 4rem);
+            border-bottom: 1px solid var(--border);
+            background: #0b0f19;
+        }
+
+        .site-logo img { display: block; width: min(390px, 42vw); height: auto; }
+        .back-link { white-space: nowrap; font-weight: 650; }
+
+        main {
+            width: min(1180px, calc(100% - 2rem));
+            margin: 0 auto;
+            padding: 3rem 0 4rem;
+        }
+
+        .eyebrow {
+            margin: 0 0 0.45rem;
+            color: var(--blue-light);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 { margin: 0 0 0.8rem; font-size: clamp(2rem, 4vw, 3.2rem); }
+        .intro { max-width: 760px; color: var(--text-muted); line-height: 1.7; }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(300px, 0.95fr);
+            gap: 1.5rem;
+            align-items: stretch;
+            margin-top: 2rem;
+        }
+
+        .contact-card {
+            padding: clamp(1.25rem, 3vw, 2rem);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: var(--bg-card);
+        }
+
+        .contact-card h2 { margin: 0 0 1.2rem; font-size: 1.35rem; }
+        .contact-list { display: grid; gap: 1.15rem; margin: 0; padding: 0; list-style: none; }
+        .contact-item { display: grid; gap: 0.3rem; }
+        .contact-label { color: var(--text-muted); font-size: 0.9rem; }
+        .contact-value { line-height: 1.55; }
+        .service-note {
+            margin-top: 1.35rem;
+            padding: 0.95rem 1rem;
+            border: 1px solid rgba(22, 136, 255, 0.38);
+            border-radius: 10px;
+            background: rgba(22, 136, 255, 0.09);
+            color: #d7eaff;
+            line-height: 1.6;
+        }
+
+        .service-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 1.25rem 0;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-dark);
+        }
+
+        .social-links { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 1.1rem; }
+        .social-link {
+            display: inline-flex;
+            min-height: 44px;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.55rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-dark);
+            font-weight: 650;
+        }
+        .social-link svg { width: 20px; height: 20px; fill: currentColor; }
+
+        .whatsapp-pending {
+            display: inline-flex;
+            min-height: 44px;
+            align-items: center;
+            padding: 0.6rem 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-muted);
+        }
+
+        .site-footer {
+            padding: 1.5rem 1rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        @media (max-width: 760px) {
+            .contact-layout { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 500px) {
+            .site-header { flex-direction: column; gap: 0.8rem; }
+            .site-logo img { width: min(86vw, 390px); }
+            main { padding-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="PC Gamer Shop, inicio">
+            <img src="assets/pc-gamer-shop-navbar-logo.png" alt="PC Gamer Shop">
+        </a>
+        <a class="back-link" href="index.html">Volver a la tienda</a>
+    </header>
+
+    <main>
+        <p class="eyebrow">Estamos para ayudarte</p>
+        <h1>Contactanos</h1>
+        <p class="intro">Escribinos por correo o encontranos en nuestras redes oficiales. Para consultas de compra, compatibilidad o soporte, incluí el modelo de tu equipo y una descripción del problema.</p>
+
+        <div class="contact-layout">
+            <section class="contact-card" aria-labelledby="contact-info-title">
+                <h2 id="contact-info-title">Atención al cliente</h2>
+                <ul class="contact-list">
+                    <li class="contact-item">
+                        <span class="contact-label">Consultas de compra y soporte</span>
+                        <a class="contact-value" href="mailto:pcgamershop.oficial@gmail.com">pcgamershop.oficial@gmail.com</a>
+                        <a class="social-link" href="mailto:pcgamershop.oficial@gmail.com?subject=Consulta%20de%20compra">Enviar consulta de compra</a>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-label">Horario de atención (Argentina)</span>
+                        <span class="contact-value">Lunes a viernes: 11:30 a 18:30<br>Sábados: 11:30 a 14:30</span>
+                    </li>
+                    <li class="contact-item">
+                        <span class="contact-label">WhatsApp</span>
+                        <span class="whatsapp-pending">Pendiente: falta confirmar el número completo</span>
+                    </li>
+                </ul>
+                <p class="service-note">Los horarios informados corresponden a atención al cliente. Los servicios y reparaciones se coordinan previamente por correo.</p>
+
+                <h2 style="margin-top: 1.8rem;">Redes sociales</h2>
+                <div class="social-links">
+                    <a class="social-link" href="https://www.instagram.com/pcgamershop.oficial/" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z"/>
+                        </svg>
+                        Instagram
+                    </a>
+                    <a class="social-link" href="https://www.facebook.com/profile.php?id=61595867833978" target="_blank" rel="noopener noreferrer">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.5v3h2.8v8h3.2ZM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Z"/>
+                        </svg>
+                        Facebook
+                    </a>
+                </div>
+            </section>
+
+            <section class="contact-card" aria-labelledby="service-title">
+                <h2 id="service-title">Servicio técnico a domicilio</h2>
+                <img class="service-image" src="assets/servicio-tecnico-domicilio.svg" alt="Ilustración referencial de soporte técnico para computadoras">
+                <p class="intro">Este servicio todavía no está disponible. Estamos preparando la atención a domicilio; por ahora, escribinos para consultas técnicas y te avisaremos cuando se habilite.</p>
+                <p class="service-note"><strong>Próximamente.</strong> No se toman turnos ni se realizan visitas a domicilio en este momento.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>PC Gamer Shop · Atención al cliente por correo electrónico.</p>
+    </footer>
+</body>
+</html>
